@@ -47,26 +47,14 @@ The class TrafficLight provides storage for a traffic light’s ID, state (an in
 
 The Intersection class stores the cycle length, the number of traffic lights that are currently added to the intersection, an array of the TrafficLight objects (maximum number of traffic lights per intersection is defined through a constant variable or a symbolic constant), and the traffic flow rates. Cycle length is composed of the total signal time to serve all of the signal phases including the green time plus any change interval. Longer cycles will accommodate more vehicles per hour but that will also produce higher average delays. The green timing for each traffic light is proportional to the traffic flow rate reported for the same road, according to the following equation:
 
-<div align="center">
-  ### $d_i = {Q_i \over Q_T} × C$
-</div> 
-
 ### $d_i = {Q_i \over Q_T} × C$
 
-Where �" is the green time for the ith traffic light, �" represents the traffic flow (number of vehicles per 
-hour) crossing the ith traffic light, �+ represents the total traffic flow passing through the intersection, and 
-� represents the cycle length in seconds. Note that the cycle length and traffic flow information must be 
-read from a file (where it is assumed that the sensory data is written into). 
-Note the followings:
-1. The constructor initializes the number of lights to zero. Other data members must be initialized to 
-safe values whenever appropriate.
+Where $d_i$ is the green time for the ith traffic light, $Q_i$ represents the traffic flow (number of vehicles per hour) crossing the ith traffic light, $Q_T$ represents the total traffic flow passing through the intersection, and $C$ represents the cycle length in seconds. 
+
+Note the following:
+1. The constructor initializes the number of lights to zero.
 2. AddLight()adds a new traffic light object to the existing array of Light objects.
 3. droplight()searches for a traffic light through its ID and removes it from the array if exists.
-4. The run()executes the simulation by running the traffic lights in sequence. This function must 
-also update the green timings as per the specified interval. 
-5. The readTrafficData()reads the cycle time and the traffic flow rates from the file and store 
-in appropriate data members. The file has the following structure: cycle time, traffic flow for road 
-R1, traffic flow for road R2, traffic flow for R3, etc., all on separate lines.
-6. The updateTiming()calculates the green timings for all the roads and saves the green timing 
-values in the respective traffic light object. It is assumed that green timings are updated every 
-specific interval (for example, every 24 hours). 
+4. The run()executes the simulation by running the traffic lights in sequence. This function must also update the green timings as per the specified interval. 
+5. The readTrafficData()reads the cycle time and the traffic flow rates from the file and store in appropriate data members. The file has the following structure: cycle time, traffic flow for road R1, traffic flow for road R2, traffic flow for R3, etc., all on separate lines.
+6. The updateTiming()calculates the green timings for all the roads and saves the green timing values in the respective traffic light object. It is assumed that green timings are updated every specific interval (for example, every 24 hours). 
