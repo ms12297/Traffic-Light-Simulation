@@ -1,7 +1,4 @@
 /*---------------------------------------------------------------------------------------*/
-/* Name: Muhammad Zaeem Shahzad, Student ID: ms12297 */
-/* Date: November 27, 2020 */
-/* Program: assignment4.cpp */
 /* Description: Traffic Light Control System: This program simulates the control of traffic
 lights at an intersection, displaying their characteristic details at set time intervals */
 /*---------------------------------------------------------------------------------------*/
