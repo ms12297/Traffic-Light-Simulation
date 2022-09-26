@@ -47,7 +47,7 @@ The class TrafficLight provides storage for a traffic light’s ID, state (an in
 
 The Intersection class stores the cycle length, the number of traffic lights that are currently added to the intersection, an array of the TrafficLight objects (maximum number of traffic lights per intersection is defined through a constant variable or a symbolic constant), and the traffic flow rates. Cycle length is composed of the total signal time to serve all of the signal phases including the green time plus any change interval. Longer cycles will accommodate more vehicles per hour but that will also produce higher average delays. The green timing for each traffic light is proportional to the traffic flow rate reported for the same road, according to the following equation:
 
-### $d_i = {Q_i} \over {Q_T} × C$
+### $d_i = {Q_i \over Q_T} × C$
 
 Where �" is the green time for the ith traffic light, �" represents the traffic flow (number of vehicles per 
 hour) crossing the ith traffic light, �+ represents the total traffic flow passing through the intersection, and 
