@@ -53,8 +53,8 @@ Where $d_i$ is the green time for the ith traffic light, $Q_i$ represents the tr
 
 Note the following:
 1. The constructor initializes the number of lights to zero.
-2. AddLight()adds a new traffic light object to the existing array of Light objects.
-3. droplight()searches for a traffic light through its ID and removes it from the array if exists.
-4. The run()executes the simulation by running the traffic lights in sequence. This function must also update the green timings as per the specified interval. 
-5. The readTrafficData()reads the cycle time and the traffic flow rates from the file and store in appropriate data members. The file has the following structure: cycle time, traffic flow for road R1, traffic flow for road R2, traffic flow for R3, etc., all on separate lines.
-6. The updateTiming()calculates the green timings for all the roads and saves the green timing values in the respective traffic light object. It is assumed that green timings are updated every specific interval (for example, every 24 hours). 
+2. AddLight() adds a new traffic light object to the existing array of Light objects.
+3. droplight() searches for a traffic light through its ID and removes it from the array if exists.
+4. The run() executes the simulation by running the traffic lights in sequence. This function must also update the green timings as per the specified interval. 
+5. The readTrafficData() reads the cycle time and the traffic flow rates from the file and store in appropriate data members. The file has the following structure: cycle time, traffic flow for road R1, traffic flow for road R2, traffic flow for R3, etc., all on separate lines.
+6. The updateTiming() calculates the green timings for all the roads and saves the green timing values in the respective traffic light object. It is assumed that green timings are updated every specific interval (for example, every 24 hours). 
